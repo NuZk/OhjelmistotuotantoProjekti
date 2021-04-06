@@ -1,0 +1,21 @@
+﻿<form method='POST' action='/users/login'>
+	<div class="row p-2">
+		<label for="userid" class="col-sm-4">Käyttäjätunnus:</label>
+		<div class="col-sm-4">
+			<input type="text" placeholder="Käyttäjätunnus" name="username" required="true" value="">
+		</div>
+	</div>
+	<div class="row p-2">
+		<label for="passwd" class="col-sm-4">Salasana:</label>
+		<div class="col-sm-4">
+			<input type="password" placeholder="Salasana" name="passwd" required='true' value="">
+		</div>
+	</div>
+	<div class="row p-2">
+		<label class="col-sm-4"></label>
+		<div class="col-sm-4">
+			<input type="submit" class="btn btn-secondary m-2" value="Kirjaudu">
+			<input type="submit" class="btn btn-secondary m-2" onclick="window.location='shop';return false;" Value="Peru">
+		</div>
+	</div>
+</form>

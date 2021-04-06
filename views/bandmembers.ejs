@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<% include head %>
+</head>
+
+<body class="container-fluid" >
+	<header class="row">
+		<section class="col-sm-12 jumbotron text-center " id="hed">
+			<%- include('layouts/header');%>
+				
+		</section>
+
+		<section class="col-sm-12">
+			<%- include('layouts/menu');%>
+		</section>
+
+	</header>
+	<section class="row">
+		<section class="col-sm-3">
+			<nav>
+				<%- include('layouts/leftmenu'); %>
+			</nav>
+		</section>
+		<section class="col-sm-9" id="mainarea">
+			<section id="carouselarea">
+				<%- include('layouts/carousel');%>
+			</section>		
+			
+		</section>
+	</section>
+	<footer>
+		<% include footer %>
+	</footer>
+</body>
+
+</html>

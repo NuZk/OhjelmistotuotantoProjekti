@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<% include head %>
+</head>
+
+<body class="container-fluid">
+	<header class="row">
+		<section class="col-sm-12 jumbotron text-center " id="hed">
+			<%- include('layouts/header');%>
+
+		</section>
+
+		<section class="col-sm-12">
+			<%- include('layouts/menu');%>
+		</section>
+
+	</header>
+	<section class="row">
+		<section class="col-sm-3">
+			<nav>
+				<%- include('layouts/leftmenu'); %>
+			</nav>
+		</section>
+		<section class="col-sm-9" id="mainarea">
+
+			<section id="msg_area" style="display:block">
+				
+					<%- include messages %>
+						<!-- tähän kohtaan populateMessages-javascript-funktio täydentää viestit $("#messagesbody").html(htmlstr) -->
+				
+			</section>
+
+			<section id="post_form_area" style="display:none">
+				<% include postformLogin %>
+			</section>
+
+		</section>
+	</section>
+	<footer>
+		<% include footer %>
+	</footer>
+</body>
+
+</html>

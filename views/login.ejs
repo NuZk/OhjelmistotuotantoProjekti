@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<head>
+	<% include head %>
+</head>
+
+<body class="container-fluid">
+	<header class="row">
+		<section class="col-sm-12 jumbotron text-center " id="hed">
+			<%- include('layouts/header');%>
+
+		</section>
+	</header>
+	<section class="col-sm-12">
+		<section class="col-sm-12">
+			<%- include('layouts/menu');%>
+		</section>
+
+	</section>
+	<section class="row">
+		<nav class="col-sm-3">
+
+		</nav>
+		<section class="col-sm-9" id="mainarea">
+			<%- include('layouts/loginform');%>
+
+		</section>
+	</section>
+
+
+
+	<footer>
+		<% include footer %>
+	</footer>
+
+</body>
+
+</html>

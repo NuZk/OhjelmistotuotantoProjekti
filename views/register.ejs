@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <% include head %>
+</head>
+
+<body>
+    <header>
+        <section class="col-sm-12 jumbotron text-center " id="hed">
+			<%- include('layouts/header');%>
+				
+		</section>
+
+		<section class="col-sm-12">
+			<%- include('layouts/menu');%>
+		</section>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-xl-9 mx-auto">
+                <div class="card card-signin flex-row my-5">
+                    <div class="card-img-left d-none d-md-flex">
+                        <!-- Background image for card set in CSS! -->
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Rekisteröidy</h5>
+                        <form class="form-signin" method="POST" action='index/register'>
+                            <div class="form-label-group">
+                                <input type="text" id="inputUserame" class="form-control" placeholder="Käyttäjätunnus"
+                                    required autofocus>
+                                <label for="inputUserame">Käyttäjätunnus</label>
+                            </div>
+
+                            <hr>
+
+                            <div class="form-label-group">
+                                <input type="password" id="inputPassword" class="form-control" placeholder="Salasana"
+                                    required>
+                                <label for="inputPassword">Salasana</label>
+                            </div>
+
+                            <div class="form-label-group">
+                                <input type="password" id="inputConfirmPassword" class="form-control"
+                                    placeholder="Salasana" required>
+                                <label for="inputConfirmPassword">Vahvista Salasana</label>
+                            </div>
+                            <hr>
+                            <button class="btn btn-lg btn-primary btn-block text-uppercase"
+                                type="submit">Rekisteröidy</button>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

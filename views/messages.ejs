@@ -1,0 +1,35 @@
+<!-- messages.ejs -->
+<section class="row">
+
+
+    <section class="row">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Tunnus</th>
+                    <th>Lähettäjä</th>
+                    <th>Aihe</th>
+                    <th>Viesti</th>
+                </tr>
+            </thead>
+            <tbody">
+                <% for(var i=0; i < messages.length; i++) { %>
+                    <tr>
+                        <td>
+                            <%= messages[i].id %>
+                        </td>
+                        <td>
+                            <%= messages[i].sender %>
+                        </td>
+                        <td>
+                            <%= messages[i].topic %>
+                        </td>
+                        <td>
+                            <%= messages[i].message %>
+                        </td>
+                    </tr>
+                    <% } %>
+                        </tbody>
+        </table>
+    </section>
+</section>

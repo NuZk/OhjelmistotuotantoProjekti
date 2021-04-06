@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-sm">
+	<ul class="navbar-nav">
+		<li class="nav-item">
+			<a class="nav-link" href="/">Uutiset</a>
+		</li>
+		<% if( login !="tuntematon" ) { %>
+			
+			<li li class="nav-item">
+				<a class="nav-link" href="users/logout">Muokkaa viestejäsi</a>
+			</li>
+			<li li class="nav-item">
+				<button class="nav-link" onclick="return postMsg()">Lähetä viesti</button>
+				
+			</li>
+			<li li class="nav-item">
+				<a class="nav-link" href="users/logout">Kirjaudu ulos</a>
+			</li>
+			<li li class="nav-item" >
+				<button class="nav-link" onclick="return deleteMessage('<%=login%>')">Poista viestejäsi</button>
+			</li>
+			<% } else { %>
+				<li class="nav-item">
+					<a class="nav-link" href="bandmembers">Jäsenet</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Kalenteri</a>
+				</li>
+				<li li class="nav-item">
+					<a class="nav-link" href="users/login">Kirjaudu</a>
+				</li>
+				<li li class="nav-item">
+					<a class="nav-link" href='post'>Yhteydenotto</a>
+				</li>
+				<%} %>
+	</ul>
+</nav>

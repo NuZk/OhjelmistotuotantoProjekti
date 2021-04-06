@@ -1,0 +1,64 @@
+body {
+    background: linear-gradient(to left top, #fdf460, #fddd4e, #fbc740, #f7b036, #f29a30, #ee8a2a, #ea7a27, #e56925, #e25921, #df481f, #db331e, #d7111f);
+    background-size: cover;
+}
+
+/* 
+Colours
+#E87C2D
+#FDF460
+#D7111F */
+
+#hed {
+    background: none;
+}
+
+#menu ul {
+    
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+
+
+#menu li a {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+.nav-link {
+    color: #fddd4e;
+}
+
+.nav-link:hover {
+    border-radius: 50%;
+    box-shadow: 0 8px 16px 0 #a53a41, 0 17px 50px 0 #d7111f;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-inner {
+    background-image: radial-gradient(circle, #fdf460, #fddd4e, #fbc740, #f7b036, #f29a30, #ee8a2a, #ea7a27, #e56925, #e25921, #df481f, #db331e, #d7111f);
+}
+
+.carousel-control-prev {
+    background-color: #FDF460;
+}
+
+.carousel-control-next {
+    background-color: rgb(173, 113, 2);
+}
+.btn{
+    transition-duration: 0.7s;
+    background-color:  #FDF460;;
+}
+.btn:hover{
+    background-color:  rgb(173, 113, 2);
+}

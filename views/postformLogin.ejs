@@ -1,0 +1,38 @@
+﻿<!-- loginpostform area -->
+	<section class="row">
+		<section class="col-sm-3">
+
+		</section>
+		<form id="postform" onsubmit="event.preventDefault(); return postValue()">
+			
+			<input type="hidden" name="sender" value="<%= login %>">		
+
+			<section class="row p-2">
+				<label for="topic" class="col-sm-4">Aihe:</label>
+				<section class="col-sm-4">
+					<input type="text" placeholder="Viestin aihe" name="topic" required='true' value="">
+				</section>
+			</section>
+
+			<section class="row p-2">
+				<label for="message" class="col-sm-4">Viesti:</label>
+				<section class="col-sm-4">
+					<textarea name="message" placeholder="Viesti" rows="3" cols="50"></textarea>
+				</section>
+
+			</section>
+
+			<section class="row p-2">
+				<label class="col-sm-4"></label>
+				<section class="col-sm-4">
+					<input type="submit" class="btn" value="Lähetä">
+				<br>
+				<br>
+					<input type="submit" class="btn" onclick="window.location='http:/';return false;"
+						Value="Peru">
+				</section>
+			</section>
+		</form>
+		</main>
+	</section>
+	
