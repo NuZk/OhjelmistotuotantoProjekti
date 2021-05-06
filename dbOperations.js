@@ -142,5 +142,36 @@ module.exports = {
             };
         });
 
+    },
+
+    editMessageById: function (req, callback) {
+        // otetaan yhteys Maria-tietokantaan
+        var con = mariadb.createConnection({
+            host: hostname,
+            user: dbUser,
+            password: dbPasswd,
+            database: msgDb
+        });
+
+        con.connect(err => {
+            if (err) {
+            result = "Access denied";
+                callback(result);
+            } else {
+                con.query("UPDATE messages SET topic = (?), message = (?) where id = (?)", [req.topic, req.message, req.id], (err, result) => {
+                    if (err) callback(false);
+                    con.query("COMMIT", (err, ans) => {
+                        ;
+                        con.query("SELECT * FROM messages", (err, data) => {
+                            if (err) callback(false);
+                            con.close();
+                            return callback(data);
+
+                        });
+                    });
+                });
+            };
+        });
+
     }
 }

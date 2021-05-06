@@ -39,12 +39,24 @@ router.delete('/:id', function(req, res, next) {
 
 /* PATCH päivitä yksittäisen viestin jokin kenttä. */
 router.patch('/:id', function(req, res, next) {
-    res.status(501).send("HTTP - PATCH: toteutus puuttuu!")
+    db.editMessageById(req, function(data){
+        if(data){
+            res.status(201).send({message:"Viesti muokattu"})
+        }else{
+            res.status(401).send({message:"ei onnistuna"})
+        }
+    })
 });
 
 /* PUT päivitä yksittäinen viesti. */
-router.put('/:id', function(req, res, next) {
-    res.status(501).send("HTTP - PUT: toteutus puuttuu!")
+router.put('/', function(req, res, next) {
+    db.editMessageById(req.body, function(data){
+        if(data){
+            res.status(201).send({message:"Viesti muokattu"})
+        }else{
+            res.status(401).send({message:"ei onnistuna"})
+        }
+    })
 });
 
 module.exports = router;
